@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Le Petit Bistro – Learn Restaurant French</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="bg"></div><canvas id="fx"></canvas>
+  <header>
+    <h1><span class="logo">🥐</span> Le Petit Bistro</h1>
+    <div id="userbar" hidden><span id="stats"></span><button id="mute" class="ghost" title="Sound">🔊</button><span id="who"></span><button id="logout" class="ghost">Log out</button></div>
+  </header>
+  <main>
+    <section id="auth" class="card hero">
+      <div class="emoji">🇫🇷</div>
+      <h2>Parle comme un pro !</h2>
+      <p>Learn the French you need to welcome and serve guests. Short lessons, an AI tutor that adapts to your mistakes, and restaurant role-plays.</p>
+      <input id="username" placeholder="Username" autocomplete="username">
+      <input id="password" type="password" placeholder="Password" autocomplete="current-password">
+      <div class="row"><button id="loginBtn" class="btn">Log in</button><button id="registerBtn" class="btn alt">Sign up</button></div>
+      <p id="authMsg" class="error"></p>
+    </section>
+    <section id="app" hidden>
+      <nav id="nav"></nav>
+      <div id="view"></div>
+    </section>
+  </main>
+  <script src="data.js"></script>
+  <script src="fx.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
