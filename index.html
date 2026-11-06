@@ -2,31 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Le Petit Bistro – Learn Restaurant French</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;800&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f2f2f7">
+  <title>welcome-nerd</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="bg"></div><canvas id="fx"></canvas>
+  <canvas id="fx"></canvas>
+  <div id="toast"></div>
+  <div id="sheet" hidden></div>
   <header>
-    <h1><span class="logo">🥐</span> Le Petit Bistro</h1>
-    <div id="userbar" hidden><span id="stats"></span><button id="mute" class="ghost" title="Sound">🔊</button><span id="who"></span><button id="logout" class="ghost">Log out</button></div>
+    <h1>🥐 Le Petit Bistro</h1>
+    <div id="userbar" hidden><span id="stats"></span><span id="who"></span><button id="logout" class="ghost">Log out</button></div>
   </header>
   <main>
     <section id="auth" class="card hero">
-      <div class="emoji">🇫🇷</div>
+      <div class="app-icon">🥐</div>
       <h2>Parle comme un pro !</h2>
-      <p>Learn the French you need to welcome and serve guests. Short lessons, an AI tutor that adapts to your mistakes, and restaurant role-plays.</p>
-      <input id="username" placeholder="Username" autocomplete="username">
-      <input id="password" type="password" placeholder="Password" autocomplete="current-password">
-      <div class="row"><button id="loginBtn" class="btn">Log in</button><button id="registerBtn" class="btn alt">Sign up</button></div>
+      <p>Learn the French you need to welcome and serve guests. Short lessons, an AI tutor that focuses on your mistakes, and restaurant role-plays.</p>
+      <div class="group">
+        <input id="username" placeholder="Username" autocomplete="username">
+        <input id="password" type="password" placeholder="Password" autocomplete="current-password">
+      </div>
+      <button id="loginBtn" class="btn full">Log in</button>
+      <button id="registerBtn" class="btn alt full">Create account</button>
       <p id="authMsg" class="error"></p>
     </section>
     <section id="app" hidden>
-      <nav id="nav"></nav>
+      <h2 id="ltitle" class="large"></h2>
       <div id="view"></div>
+      <nav id="nav"></nav>
     </section>
   </main>
   <script src="data.js"></script>
